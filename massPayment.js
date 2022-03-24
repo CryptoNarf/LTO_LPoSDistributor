@@ -154,7 +154,7 @@ var doPayment = function(payments, counter, batchid) {
 	setTimeout(function() {
 		request.post({  url: config.node + '/assets/transfer',
 				json: payment,
-				headers: { "Accept": "application/json", "Content-Type": "application/json", "api_key": config.apiKey }
+				headers: { "Accept": "application/json", "Content-Type": "application/json", "X-API-Key": config.apiKey }
 			     }, function(err) {
             				if (err) {
                 				console.log(err);

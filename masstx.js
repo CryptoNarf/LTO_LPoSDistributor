@@ -268,7 +268,7 @@ var doPayment = function(payments, counter, batchid, nrofmasstransfers) {
             request.post({
               url: config.node + '/transactions/sign',
               json: masstransactionpayment,
-              headers: {"Accept": "application/json", "Content-Type": "application/json", "api_key": config.apiKey}
+              headers: {"Accept": "application/json", "Content-Type": "application/json", "X-API-Key": config.apiKey}
             }, function (err, res) {
               if (err || res.body.error) {
                 const error = err || res.body;
